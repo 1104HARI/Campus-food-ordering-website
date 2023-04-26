@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+
+.back-ground{
+    background:linear-gradient(rgb(0,0,0,0.3),rgb(0,0,0,0.6)),url("/pic/bg1.jpg");
+    height:130vh;
+    background-repeat: no-repeat;
+    background-size:cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header{
+    background-color: #ff4757;
+}
+.nav{
+    max-width: 1200px;
+    margin: auto;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    font-size: 1.1rem;
+    font-weight: 500px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.items ul{
+    display: flex;
+    list-style: none;
+}
+
+.items ul li{
+    color: #ffffff;
+    padding: 15px;
+}
+
+.items ul li a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500px;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.h2{
+    text-align: center;
+    margin-top: 1rem;
+    color: white;
+    font-size: 2.5rem;
+    height:250px;
+    width: 250px;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    background-color: #ff4757;
+    display: table;
+}
+
+p{
+    display: table-cell;
+    vertical-align: middle;
+}
+.container{
+    max-width: 1200px;
+    padding: 4rem;
+    margin: auto;
+    width: 100%;
+}
+.content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px,auto));
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    position: relative;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 1px 4px black;
+    border-radius: 3px;
+    height: 100%;
+}
+
+.whole{
+    border-bottom: 500px;
+}
+
+.food-image{
+    transition: 0.3s;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.pic{
+    overflow: hidden;
+}
+
+.pic:hover img{
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+.res-name{
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+    color: #ff6348;
+    padding: 10px;
+}
+
+img{
+    height:250px;
+    width: 100%;
+}
+    </style>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="nav">
+            <a href="#" class="logo">
+                <ion-icon name="fast-food-outline"></ion-icon>
+                Aroma
+            </a>
+            <div class="items">
+                <ul>
+                    <li><a class ="active" href="#" onclick="window.location.href='/home';"><ion-icon name="home-outline"></ion-icon>Home</a></li>
+                    <li><a class ="active" href="/profile"><ion-icon name="home-outline"></ion-icon>Profile</a></li>
+                    <li><a href="/login">Logout</a></li>
+                     </ul>
+            </div>
+        </div>
+    </header>
+
+
+    
+    <div class="back-ground">
+        <div class="h2"><p>Restaurants</p></div>
+
+    <div class="container">
+
+        <div class="content">
+
+            <div class="whole">
+                <div class="box">
+                    <div class="pic">
+                        <img src="/pic/cb.jpg" class="food-image" onclick="window.location.href='/shopping';">
+                    </div>
+                    <h2 class="res-name">Broken Eggs</h2>
+                </div>
+                </div>
+
+            <div class="whole">
+            <div class="box">
+                <div class="pic">
+                    <img src="/pic/roast.jpg" class="food-image" onclick="window.location.href='/shopping';">
+                </div>
+                <h2 class="res-name">Aroma</h2>
+            </div>
+            </div>
+
+            <div class="whole">
+                <div class="box">
+                    <div class="pic">
+                        <img src="/pic/fr.jpg" class="food-image" onclick="window.location.href='/shopping';">
+                    </div>
+                    <h2 class="res-name">Cravy's House</h2>
+                </div>
+                </div>
+           
+                <div class="whole">
+                    <div class="box">
+                        <div class="pic">
+                            <img src="/pic/cn.jpg" class="food-image" onclick="window.location.href='/shopping';">
+                        </div>
+                        <h2 class="res-name">Hastag</h2>
+                    </div>
+                    </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

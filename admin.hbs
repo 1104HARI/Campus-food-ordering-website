@@ -1,0 +1,24 @@
+var nodemailer = require('nodemailer');
+
+var transporter = nodemailer.createTransport({
+  service: '',
+  auth: {
+    user: '{{user.NAME}}',
+    pass: '{{user.PASS}}'
+  }
+});
+
+var mailOptions = {
+  from: '{{user.NAME}}',
+  to: 'haribalan.thangaraj@gmail.com',
+  subject: 'Order Received',
+  text: ``
+};
+
+transporter.sendMail(mailOptions, function(error, info){
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('Email sent: ' + info.response);
+  }
+});
